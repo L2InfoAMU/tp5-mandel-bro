@@ -10,23 +10,27 @@ public class BruteRasterImage implements Image  {
     private int height;
 
     public BruteRasterImage(Color color, int width, int height){
-        for (int row =0 ; row< width ; row++)
-            for (int col =0 ; col< height ; col++)
-                this.pixels[row][col] = color;
+        setWidth(width);
+        setHeight(height);
+        createRepresentation();
+        setPixelsColor(color);
     }
 
     public BruteRasterImage(Color[][] colors){
+        Matrices.requiresNonNull(colors);
+        Matrices.requiresNonZeroDimensions(colors);
+        Matrices.requiresRectangularMatrix(colors);
         this.pixels=colors;
+
     }
 
     public void createRepresentation(){
-        /*for (int row =0 ; row< width ; row++)
-            for (int col =0 ; col< height ; col++)
-                setPixelsColor();*/
+        pixels = new Color[width][height];
+
     }
 
     public void setPixelColor(Color color, int x, int y){
-        pixels[y][x] = color;
+        pixels[x][y] = color;
     }
 
     private void setPixelsColor(Color[][] pixels){
@@ -41,7 +45,7 @@ public class BruteRasterImage implements Image  {
 
     @Override
     public Color getPixelColor(int x, int y){
-        return pixels[y][x];
+        return pixels[x][y];
     }
 
     @Override
