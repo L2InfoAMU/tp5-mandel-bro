@@ -17,20 +17,20 @@ public class PaletteRasterImage implements Image {
         setWidth(width);
         createRepresentation();
         palette.add(color);
-        for (int row=0 ; row<height ; row++) {
-            for (int col=0 ; col<width ; col++) {
-                indexesOfColors[row][col] = 0;
+        for (int y=0 ; y<height ; y++) {
+            for (int x=0 ; x<width ; x++) {
+                indexesOfColors[y][x] = 0;
             }
         }
     }
 
     public PaletteRasterImage(Color[][] pixels) {
-        setHeight(pixels.length);
-        setWidth(pixels[0].length);
+        setHeight(pixels[0].length);
+        setWidth(pixels.length);
         createRepresentation();
-        for (int row=0 ; row<height ; row++) {
-            for (int col=0 ; col<width ; col++) {
-                setPixelColor(pixels[row][col], row, col);
+        for (int y=0 ; y<height ; y++) {
+            for (int x=0 ; x<width ; x++) {
+                setPixelColor(pixels[x][y], x, y);
             }
         }
     }
@@ -42,11 +42,11 @@ public class PaletteRasterImage implements Image {
 
     public void setPixelColor(Color color, int x, int y) {
         if (!palette.contains(color)) palette.add(color);
-        indexesOfColors[x][y]=palette.indexOf(color);
+        indexesOfColors[y][x]=palette.indexOf(color);
     }
 
     public Color getPixelColor(int x, int y) {
-        return palette.get(indexesOfColors[x][y]);
+        return palette.get(indexesOfColors[y][x]);
     }
 
     public void setPixelsColor(Color[][] pixels) {
