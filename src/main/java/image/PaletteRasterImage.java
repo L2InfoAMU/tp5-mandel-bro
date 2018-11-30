@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PaletteRasterImage implements Image {
+public class PaletteRasterImage extends RasterImage {
     private List<Color> palette;
     private int[][] indexesOfColors;
     /*La classe contient les paramètres height et width, car la méthode createRepresentation crée les matrices sans appeler aucun paramètre*/
@@ -57,19 +57,4 @@ public class PaletteRasterImage implements Image {
         new PaletteRasterImage(color, this.width, this.height);
     }
 
-    public int getHeight() {
-        return this.height;
-    }
-
-    public int getWidth() {
-        return this.width;
-    }
-
-    protected void setWidth(int width) {
-        this.width=width;
-    }
-
-    protected void setHeight(int height) {
-        this.height=height;
-    }
 }
