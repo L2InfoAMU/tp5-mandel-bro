@@ -25,14 +25,9 @@ public class PaletteRasterImage extends RasterImage {
     }
 
     public PaletteRasterImage(Color[][] pixels) {
-        setHeight(pixels[0].length);
-        setWidth(pixels.length);
-        createRepresentation();
-        for (int y=0 ; y<height ; y++) {
-            for (int x=0 ; x<width ; x++) {
-                setPixelColor(pixels[x][y], x, y);
-            }
-        }
+
+
+        setPixelsColor(pixels);
     }
 
     public void createRepresentation() {
@@ -50,7 +45,16 @@ public class PaletteRasterImage extends RasterImage {
     }
 
     public void setPixelsColor(Color[][] pixels) {
-        new PaletteRasterImage(pixels);
+
+        setHeight(pixels[0].length);
+        setWidth(pixels.length);
+        createRepresentation();
+
+        for (int y=0 ; y<height ; y++) {
+            for (int x=0 ; x<width ; x++) {
+                setPixelColor(pixels[x][y], x, y);
+            }
+        }
     }
 
     private void setPixelsColor(Color color) {
