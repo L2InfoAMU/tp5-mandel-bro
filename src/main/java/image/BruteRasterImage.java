@@ -20,6 +20,8 @@ public class BruteRasterImage implements Image  {
         Matrices.requiresNonNull(colors);
         Matrices.requiresNonZeroDimensions(colors);
         Matrices.requiresRectangularMatrix(colors);
+        setHeight(colors[0].length);
+        setWidth(colors.length);
         this.pixels=colors;
 
     }
@@ -38,9 +40,9 @@ public class BruteRasterImage implements Image  {
     }
 
     private void setPixelsColor(Color color){
-        for(int row =0 ; row <this.width ; row++)
-            for(int col =0 ; col<this.height ; col++)
-                pixels[row][col] = color;
+        for(int y =0 ; y <this.width ; y++)
+            for(int x =0 ; x<this.height ; x++)
+                pixels[x][y] = color;
     }
 
     @Override
