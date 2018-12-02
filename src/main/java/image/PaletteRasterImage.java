@@ -9,8 +9,6 @@ public class PaletteRasterImage extends RasterImage {
     private List<Color> palette;
     private int[][] indexesOfColors;
     /*La classe contient les paramètres height et width, car la méthode createRepresentation crée les matrices sans appeler aucun paramètre*/
-    private int height;
-    private int width;
 
     public PaletteRasterImage(Color color, int width, int height) {
         setHeight(height);
@@ -19,14 +17,11 @@ public class PaletteRasterImage extends RasterImage {
         palette.add(color);
         for (int y=0 ; y<height ; y++) {
             for (int x=0 ; x<width ; x++) {
-                indexesOfColors[y][x] = 0;
+                indexesOfColors[x][y] = 0;
             }
         }
     }
-
     public PaletteRasterImage(Color[][] pixels) {
-
-
         setPixelsColor(pixels);
     }
 
@@ -41,7 +36,7 @@ public class PaletteRasterImage extends RasterImage {
     }
 
     public Color getPixelColor(int x, int y) {
-        return palette.get(indexesOfColors[y][x]);
+        return (palette.get(indexesOfColors[y][x]));
     }
 
     public void setPixelsColor(Color[][] pixels) {
@@ -49,7 +44,6 @@ public class PaletteRasterImage extends RasterImage {
         setHeight(pixels[0].length);
         setWidth(pixels.length);
         createRepresentation();
-
         for (int y=0 ; y<height ; y++) {
             for (int x=0 ; x<width ; x++) {
                 setPixelColor(pixels[x][y], x, y);
