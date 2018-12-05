@@ -14,18 +14,13 @@ public class SparseRasterImage extends RasterImage {
         setHeight(height);
         setWidth(width);
         createRepresentation();
-        for (int x =0 ; x < width ; x++)
-            for(int y =0 ; y < height; y++)
-                setPixelColor(color, x, y);
-
+        setPixelsColor(color);
     }
     public SparseRasterImage(Color[][] pixels){
-        setHeight(pixels.length);
-        setWidth(pixels[0].length);
+        setHeight(pixels[0].length);
+        setWidth(pixels.length);
         createRepresentation();
-        for (int x =0 ; x < width ; x++)
-            for(int y =0 ; y < height; y++)
-                setPixelColor(pixels[x][y], x, y);
+        setPixelsColor(pixels);
     }
 
     public void createRepresentation() {
@@ -41,10 +36,14 @@ public class SparseRasterImage extends RasterImage {
     }
 
     private void setPixelsColor(Color[][] pixels) {
-        new SparseRasterImage(pixels);
+        for (int x =0 ; x < width ; x++)
+            for(int y =0 ; y < height; y++)
+                setPixelColor(pixels[x][y], x, y);
     }
 
     private void setPixelsColor(Color color) {
-        new SparseRasterImage(color, getWidth(), getHeight());
+        for (int x =0 ; x < width ; x++)
+            for(int y =0 ; y < height; y++)
+                setPixelColor(color, x, y);
     }
 }
