@@ -19,10 +19,10 @@ public class VectorImage implements Image {
     }
     @Override
     public Color getPixelColor(int x, int y) {
-        for(Shape shape : shapes)
-            if(shape.contains(new Point(x,y)))
-                return shape.getColor();
-            return Color.WHITE;
+        for(Shape shape : shapes) {
+            if(shape.contains(new Point(x,y))) return shape.getColor();
+        }
+        return Color.WHITE;
     }
 
     @Override
