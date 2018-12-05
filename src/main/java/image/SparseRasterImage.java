@@ -16,6 +16,7 @@ public class SparseRasterImage extends RasterImage {
         createRepresentation();
         setPixelsColor(color);
     }
+
     public SparseRasterImage(Color[][] pixels){
         setHeight(pixels[0].length);
         setWidth(pixels.length);
