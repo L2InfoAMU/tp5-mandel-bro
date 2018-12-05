@@ -39,7 +39,7 @@ public class BruteRasterImage extends RasterImage  {
     private void setPixelsColor(Color color){
         for(int y =0 ; y <this.width ; y++)
             for(int x =0 ; x<this.height ; x++)
-                pixels[y][x] = color;
+               setPixelColor(color,x,y);
     }
 
     @Override
