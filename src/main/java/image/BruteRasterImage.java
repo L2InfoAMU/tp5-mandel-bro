@@ -25,7 +25,7 @@ public class BruteRasterImage extends RasterImage  {
     }
 
     public void createRepresentation(){
-        pixels = new Color[width][height];
+        pixels = new Color[getWidth()][getHeight()];
     }
 
     public void setPixelColor(Color color, int x, int y){
@@ -37,8 +37,8 @@ public class BruteRasterImage extends RasterImage  {
     }
 
     private void setPixelsColor(Color color){
-        for(int y =0 ; y <this.width ; y++)
-            for(int x =0 ; x<this.height ; x++)
+        for(int y =0 ; y <getWidth() ; y++)
+            for(int x =0 ; x<getHeight() ; x++)
                setPixelColor(color,x,y);
     }
 
