@@ -5,7 +5,7 @@ public abstract class RasterImage implements Image {
     protected int width;
     protected int height;
 
-    /*Fonction qui retourne la largeur de l'image
+    /**Fonction qui retourne la largeur de l'image
      * @return la largeur de l'image
      */
     @Override
@@ -13,7 +13,7 @@ public abstract class RasterImage implements Image {
         return width;
     }
 
-    /*Fonction qui retourne la longueur de l'image
+    /**Fonction qui retourne la longueur de l'image
      * @return la longueur de l'image
      */
     @Override
@@ -21,15 +21,15 @@ public abstract class RasterImage implements Image {
         return height;
     }
 
-    /*Fonction qui fixe la largeur de l'image
-     * @param la largeur de l'image que l'on veut
+    /**Fonction qui fixe la largeur de l'image
+     * @param width, la largeur de l'image que l'on veut
      */
     protected void setWidth(int width){
         this.width=width;
     }
 
-    /*Fonction qui fixe la longueur de l'image
-     * @param la longueur de l'image que l'on veut
+    /**Fonction qui fixe la longueur de l'image
+     * @param height, la longueur de l'image que l'on veut
      */
     protected void setHeight(int height){
         this.height=height;

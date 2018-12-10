@@ -11,7 +11,7 @@ public class RasterFlagFactory implements ImageFactory {
     private Color rightColor;
     private RasterImageType rasterImageType;
 
-    /*Constructeur du RasterFlagFactory de paramètres donnés
+    /**Constructeur du RasterFlagFactory de paramètres donnés
      * @param width la largeur de l'image
      * @param height la longueur de l'image
      * @param leftColor, la couleur de gauche
@@ -28,7 +28,7 @@ public class RasterFlagFactory implements ImageFactory {
         this.rasterImageType = rasterImageType;
     }
 
-    /*Fonction qui créer l'image*/
+    /**Fonction qui créer l'image*/
     @Override
     public Image makeImage() {
         Color[][] colors = new Color[width][height];

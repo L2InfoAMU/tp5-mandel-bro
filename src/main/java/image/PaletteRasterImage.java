@@ -9,7 +9,7 @@ public class PaletteRasterImage extends RasterImage {
     private List<Color> palette;
     private int[][] indexesOfColors;
 
-    /*Fonction qui construit une image de taille spécifiée et dont tous les pixels sont de la couleur spécifiée
+    /**Fonction qui construit une image de taille spécifiée et dont tous les pixels sont de la couleur spécifiée
      * @param color, une couleur que l'on veut attribuer à tous les pixels
      * @param width la largeur de l'image
      * @param height la longueur de l'image
@@ -21,8 +21,8 @@ public class PaletteRasterImage extends RasterImage {
         setPixelsColor(color);
     }
 
-    /*Fonction qui construit une image à partir de la matrice donnée en paramètre (et qui vérifie que la matrice soit correcte)
-     * @param une matrice de coordonnées [x] [y]
+    /**Fonction qui construit une image à partir de la matrice donnée en paramètre (et qui vérifie que la matrice soit correcte)
+     * @param pixels, une matrice de coordonnées [x] [y]
      */
     public PaletteRasterImage(Color[][] pixels) {
         setHeight(pixels[0].length);
@@ -31,7 +31,7 @@ public class PaletteRasterImage extends RasterImage {
         setPixelsColor(pixels);
     }
 
-    /*Fonction qui créer la représentation d'une PaletteRasterImage, c'est à dire qu'on alloue la liste pour stocker la palette et la matrice représentant
+    /**Fonction qui créer la représentation d'une PaletteRasterImage, c'est à dire qu'on alloue la liste pour stocker la palette et la matrice représentant
 l’image */
     public void createRepresentation() {
         this.palette = new ArrayList<>();
@@ -39,8 +39,8 @@ l’image */
     }
 
 
-    /*Fonction qui fixe la couleur d’un pixel (en ajoutant la couleur à la palette si elle n’était pas dans la palette).
-     * @param une couleur que l'on veut attribuer à un pixel
+    /**Fonction qui fixe la couleur d’un pixel (en ajoutant la couleur à la palette si elle n’était pas dans la palette).
+     * @param color, une couleur que l'on veut attribuer à un pixel
      * @param x, l'ordonnée du pixel
      * @param y, l'abscisse du pixel
      */
@@ -49,7 +49,7 @@ l’image */
         indexesOfColors[x][y]=palette.indexOf(color);
     }
 
-    /*Fonction qui retourne la couleur d'un pixel
+    /**Fonction qui retourne la couleur d'un pixel
      * @param x, l'ordonnée du pixel
      * @param y, l'abscisse du pixel
      * @return la couleur d'un pixel de coordonnées x, y
@@ -58,8 +58,8 @@ l’image */
         return palette.get(indexesOfColors[x][y]);
     }
 
-    /*Fonction qui met à jour les valeurs de couleurs de l'image en utilisant les valeurs de la matrice donnée en paramètre
-     * @param une matrice de pixels qui renvoie des valeur de type Color
+    /**Fonction qui met à jour les valeurs de couleurs de l'image en utilisant les valeurs de la matrice donnée en paramètre
+     * @param pixels, une matrice de pixels qui renvoie des valeur de type Color
      */
     public void setPixelsColor(Color[][] pixels) {
         for (int y=0 ; y<getHeight() ; y++) {
@@ -69,8 +69,8 @@ l’image */
         }
     }
 
-    /*Fonction qui change les valeurs de tous les pixels pour qu'ils soient tous de la couleur donnée en paramètre
-     * @param une couleur que l'on veut attribuer à l'ensemble de pixels
+    /**Fonction qui change les valeurs de tous les pixels pour qu'ils soient tous de la couleur donnée en paramètre
+     * @param color, une couleur que l'on veut attribuer à l'ensemble de pixels
      */
     private void setPixelsColor(Color color) {
         for (int y=0 ; y<getHeight() ; y++) {

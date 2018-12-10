@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Point {
     public final int x, y;
 
-    /*Constructeur du point de paramètres donnés
+    /**Constructeur du point de paramètres donnés
      * @param x, l'abscisse du point
      * @param y, l'ordonnée du point
      */

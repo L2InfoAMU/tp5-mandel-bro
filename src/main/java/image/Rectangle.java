@@ -10,7 +10,7 @@ public class Rectangle implements Shape {
     public int height;
     public Color color;
 
-    /*Fonction qui construit un rectangle au point donné, de taille spécifiée et de couleur donnée
+    /**Fonction qui construit un rectangle au point donné, de taille spécifiée et de couleur donnée
      * @param x, l'abscisse du point de départ du rectangle
      * @param y, l'ordonnée du point de départ du rectangle
      * @param height la longueur de l'image
@@ -24,8 +24,8 @@ public class Rectangle implements Shape {
         this.color = color;
     }
 
-    /*Fonction qui permet de savoir si un point est dans le rectangle ou pas
-     * @param un point
+    /**Fonction qui permet de savoir si un point est dans le rectangle ou pas
+     * @param point, un point
      * @return true si le point est contenu dans le rectangle, false sinon
      */
     @Override
@@ -33,7 +33,7 @@ public class Rectangle implements Shape {
         return(point.x >= origin.x && point.y >= origin.y && point.x <= (origin.x+this.width) && point.y <= (origin.y+this.height));
     }
 
-    /*Fonction qui retourne la couleur du rectangle
+    /**Fonction qui retourne la couleur du rectangle
      * @return la couleur du rectangle
      */
     @Override

@@ -7,7 +7,7 @@ public class Annulus implements Shape{
     public Disk outerDisk;
     public Color color;
 
-    /*Fonction qui construit un anneau de paramètres donnés
+    /**Fonction qui construit un anneau de paramètres donnés
      * @param innerDisk, le disque intérieur de l'anneau
      * @param outerDisk, le disque extérieur de l'anneau
      * @param color, la couleur de l'anneau
@@ -18,8 +18,8 @@ public class Annulus implements Shape{
         this.color=color;
     }
 
-    /*Fonction qui permet de savoir si un point est dans l'anneau ou pas
-     * @param un point
+    /**Fonction qui permet de savoir si un point est dans l'anneau ou pas
+     * @param point, un point
      * @return true si le point est contenu dans l'anneau, false sinon
      */
     @Override
@@ -28,7 +28,7 @@ public class Annulus implements Shape{
     }
 
 
-    /*Fonction qui retourne la couleur de l'anneau
+    /**Fonction qui retourne la couleur de l'anneau
      * @return la couleur de l'anneau
      */
     @Override

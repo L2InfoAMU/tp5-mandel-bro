@@ -10,8 +10,8 @@ public class VectorImage extends RasterImage {
     private int width;
     private int height;
 
-    /*Fonction qui construit une image de la taille spécifiée et avec les formes données en paramètre.
-     * @param une liste de formes
+    /**Fonction qui construit une image de la taille spécifiée et avec les formes données en paramètre.
+     * @param shapes, une liste de formes
      * @param width la largeur de l'image
      * @param height la longueur de l'image
      */
@@ -22,7 +22,7 @@ public class VectorImage extends RasterImage {
 
     }
 
-    /*Fonction qui retourne la couleur d'un pixel
+    /**Fonction qui retourne la couleur d'un pixel
      * @param x, l'ordonnée du pixel
      * @param y, l'abscisse du pixel
      * @return la couleur d'un pixel de coordonnées x, y s'il est contenu dans la forme, blanc s'il ne l'est pas

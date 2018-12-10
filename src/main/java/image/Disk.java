@@ -8,7 +8,7 @@ public class Disk implements Shape {
     public Color color;
     public double radius;
 
-    /*Fonction qui construit un disque de paramètres donnés
+    /**Fonction qui construit un disque de paramètres donnés
      * @param x, l'abscisse de l'origine
      * @param y, l'ordonnée de l'origine
      * @param radius, le rayon du disque
@@ -20,8 +20,8 @@ public class Disk implements Shape {
         this.radius = radius;
     }
 
-    /*Fonction qui permet de savoir si un point est dans le disque ou pas
-     * @param un point
+    /**Fonction qui permet de savoir si un point est dans le disque ou pas
+     * @param point,un point
      * @return true si le point est contenu dans le disque, false sinon
      */
     @Override
@@ -31,7 +31,7 @@ public class Disk implements Shape {
     }
 
 
-    /*Fonction qui retourne la couleur du disque
+    /**Fonction qui retourne la couleur du disque
      * @return la couleur du disque
      */
     @Override
