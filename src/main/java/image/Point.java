@@ -8,6 +8,10 @@ import java.util.Objects;
 public class Point {
     public final int x, y;
 
+    /*Constructeur du point de paramètres donnés
+     * @param x, l'abscisse du point
+     * @param y, l'ordonnée du point
+     */
     Point(int x, int y) {
         this.x = x;
         this.y = y;
