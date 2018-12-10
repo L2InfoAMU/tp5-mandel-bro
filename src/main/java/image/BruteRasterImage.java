@@ -8,7 +8,7 @@ public class BruteRasterImage extends RasterImage  {
     private Color[][] pixels;
 
     /*Fonction qui construit une image de taille spécifiée et dont tous les pixels sont de la couleur spécifiée
-     * @param une couleur que l'on veut attribuer à tous les pixels
+     * @param color une couleur que l'on veut attribuer à tous les pixels
      * @param width la largeur de l'image
      * @param height la longueur de l'image
      */
