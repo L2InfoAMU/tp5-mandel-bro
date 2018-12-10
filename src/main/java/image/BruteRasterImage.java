@@ -71,8 +71,4 @@ public class BruteRasterImage extends RasterImage  {
             for(int x =0 ; x<getHeight() ; x++)
                setPixelColor(color,x,y);
     }
-
-
-
-
 }
