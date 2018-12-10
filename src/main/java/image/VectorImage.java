@@ -4,42 +4,34 @@ import javafx.scene.paint.Color;
 
 import java.util.List;
 
-public class VectorImage implements Image {
+public class VectorImage extends RasterImage {
 
     private List<Shape> shapes;
     private int width;
     private int height;
 
-
+    /*Fonction qui construit une image de la taille spécifiée et avec les formes données en paramètre.
+     * @param une liste de formes
+     * @param width la largeur de l'image
+     * @param height la longueur de l'image
+     */
     public VectorImage(List<Shape> shapes, int width, int height){
         this.shapes = shapes;
         setHeight(height);
         setWidth(width);
 
     }
+
+    /*Fonction qui retourne la couleur d'un pixel
+     * @param x, l'ordonnée du pixel
+     * @param y, l'abscisse du pixel
+     * @return la couleur d'un pixel de coordonnées x, y s'il est contenu dans la forme, blanc s'il ne l'est pas
+     */
     @Override
     public Color getPixelColor(int x, int y) {
         for(Shape shape : shapes) {
             if(shape.contains(new Point(x,y))) return shape.getColor();
         }
         return Color.WHITE;
-    }
-
-    @Override
-    public int getWidth() {
-        return this.width;
-    }
-
-    @Override
-    public int getHeight() {
-        return this.height;
-    }
-
-    protected void setWidth(int width) {
-        this.width = width;
-    }
-
-    protected void setHeight(int height){
-        this.height = height;
     }
 }
