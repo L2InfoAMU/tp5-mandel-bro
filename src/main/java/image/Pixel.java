@@ -13,7 +13,7 @@ public class Pixel extends Point{
      * @param y, l'ordonnée du pixel
      * @param color, la couleur voulu du pixel
      */
-    Pixel(int x, int y, Color color) {
+    public Pixel(int x, int y, Color color) {
         super(x, y);
         this.color = color;
     }

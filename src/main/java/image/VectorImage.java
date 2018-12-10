@@ -7,8 +7,6 @@ import java.util.List;
 public class VectorImage extends RasterImage {
 
     private List<Shape> shapes;
-    private int width;
-    private int height;
 
     /**Fonction qui construit une image de la taille spécifiée et avec les formes données en paramètre.
      * @param shapes, une liste de formes
