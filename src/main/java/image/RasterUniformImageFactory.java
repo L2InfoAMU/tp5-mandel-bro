@@ -8,6 +8,12 @@ public class RasterUniformImageFactory implements ImageFactory {
     private Color color;
     private RasterImageType rasterImageType;
 
+    /*Constructeur du RasterUniformImageFactory de paramètres donnés
+     * @param width la largeur de l'image
+     * @param height la longueur de l'image
+     * @param color, la couleur de l'image
+     * @param rasterImageType, une image de type Raster
+     */
     public RasterUniformImageFactory(int width, int height, Color color, RasterImageType rasterImageType) {
         this.width = width;
         this.height = height;
@@ -15,6 +21,7 @@ public class RasterUniformImageFactory implements ImageFactory {
         this.rasterImageType = rasterImageType;
     }
 
+    /*Fonction qui créer l'image*/
     @Override
     public Image makeImage() {
         switch (rasterImageType){
